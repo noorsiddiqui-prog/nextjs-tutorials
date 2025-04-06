@@ -3,7 +3,10 @@ const nextConfig = {
     reactStrictMode: true,
     swcMinify: false,
     images: {
-       domains: ["https://nextjs.org"]
+       remotePatterns: [
+        {protocol: "https", hostname: 'pbs.twimg.com'},
+        {protocol: "https", hostname: 'picsum.photos'}
+       ]
     }
 };
 
