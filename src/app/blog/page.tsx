@@ -8,7 +8,9 @@ export default function Home() {
       <h1 className="text-center text-4xl font-bold m-10">Feed</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 auto-rows-max	 gap-6 m-10">
         {photos.map(({ id, imageSrc }) => (
-          <Link key={id} href={`/blog/photos/${id}`}>
+        //   <Link key={id} href={`/blog/photos/${id}`}>
+        //   <Link key={id}  href={{ pathname: "/blog", query: { modal: `photos/${id}` } }} scroll={false}>
+          <Link key={id} href={`/blog/photos/${id}`} passHref>
             <Image
               alt={imageSrc}
               src={imageSrc}

@@ -1,10 +1,13 @@
 import { ReactNode } from "react"
 
 export default function BlogLayout({
-    children
+    children,
+    modal
 }: {
     children: ReactNode,
+    modal?: ReactNode,
 }) {
+    console.log("blog not getting", children, modal)
     return (
         <>
             <div className="">
@@ -13,6 +16,7 @@ export default function BlogLayout({
                 </div>
                 <div className="">
                     {children}
+                    {modal}
                 </div>
             </div>
         </>
